@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="em">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Add Two Numbers</title>
+    </head>
+    <body>
+        <div>
+            <form>
+                <div>
+                    <label for="firstNumber">First Number</label>
+                    <input type="text" id="firstNumber"/>
+                </div>
+                
+                <div>
+                    <label for="secondNumber">Second Number</label>
+                    <input type="text" id="secondNumber"/>
+                </div>
+                
+                <div>
+                    <label for="sumNumber">Sum:</label>
+                    <input type="text" id="sumNumber" readonly/>
+                </div>
+                
+                <button type="button" onclick=doAdd();>Add</button>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function doAdd(){
+                let first = parseInt(document.getElementById("firstNumber").value) || 0;
+                let second = parseInt(document.getElementById("secondNumber").value) || 0;
+                let sum = first + second;
+                document.getElementById("sumNumber").value = sum;
+            }
+        </script>
+    </body>
+</html>
