@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-q)gd7z4cibhiul9h9m#hjj259i=ni4de45p2%tsa7dc&qdt1t1'
+SECRET_KEY = 'django-insecure-k9uyiqarszc0+-%^cpqe#6vrz63ia1yy)=a$8p=3*if)zf_dzo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Doctorapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'DoctorApp'
 ]
 
 MIDDLEWARE = [
@@ -74,17 +74,22 @@ WSGI_APPLICATION = 'ClinicalProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'clinical_project_db',
-        'USER':'root',
-        'PASSWORD':'$gaSql@123',
-        'HOST':'127.0.0.1',
-        'PORT':'3306' 
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}'''
+DATABASES = { 
+    'default': { 
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'clinical_project_db', # Your MySQL database name 
+    'USER': 'root', 
+    'PASSWORD': '$gaSql@123', 
+    'HOST': '127.0.0.1', 
+    'PORT': '3306', 
+} 
+} 
 
 
 # Password validation
